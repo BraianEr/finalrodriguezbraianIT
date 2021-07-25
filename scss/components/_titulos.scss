@@ -1,0 +1,170 @@
+@import "../base/animaciones";
+
+/* Titulos */
+.contenedor-titulo-principal {
+  margin-top: 5rem;
+  .titulo-principal {
+    font-family: "Roboto", sans-serif;
+    color: nth($colores, 2);
+    animation-name: animacion_1;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 0;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: map-get($textmaps, titulo1);
+  }
+}
+
+/* Sub-titulos */
+.contenedor-subtitulo {
+  @extend %center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  .cont-sub {
+    transition: all ease 2s;
+    &:hover {
+      transform: scale(1.5);
+    }
+    .subtitulo {
+      font-family: "Roboto", sans-serif;
+      font-size: map-get($textmaps, titulo3);
+      letter-spacing: 6px;
+      word-spacing: 6px;
+      color: nth($colores, 5);
+      font-style: italic;
+      text-align: center;
+      margin: 0;
+      padding: 3rem 3rem;
+      text-shadow: 0px 5px 10px nth($colores, 3);
+    }
+  }
+}
+.contenedor-maquina-escribir {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .maquina-escribir {
+    background-color: transparent;
+    position: relative;
+    @include textshadow(0px 10px 20px nth($colores, 3));
+    &:after {
+      content: "";
+      border-left: 2px solid black;
+      background-color: white;
+      right: 0;
+      height: 100%;
+      position: absolute;
+      animation: maquinaescribir 4s infinite alternate steps(40);
+    }
+  }
+}
+.consejos {
+  font-size: map-get($textmaps, titulo2);
+  color: nth($colores, 4);
+  text-align: center;
+  margin: 2rem;
+}
+
+/* Media titulo */
+@media (max-width: 900px) {
+  .contenedor-titulo-principal {
+    margin: 1rem 0;
+    height: 4rem;
+    .titulo-principal {
+      font-family: "Roboto", sans-serif;
+      color: nth($colores, 2);
+      animation-name: animacion_1;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      animation-duration: 5s;
+      animation-delay: 0;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: map-get($textmaps, titulo2);
+    }
+  }
+  /* Media Subtitulo */
+  .contenedor-subtitulo {
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    .cont-sub {
+      transition: all ease 2s;
+      &:hover {
+        transform: scale(1.5);
+      }
+      .subtitulo {
+        font-family: "Roboto", sans-serif;
+        font-size: map-get($textmaps, titulo3);
+        letter-spacing: 6px;
+        word-spacing: 6px;
+        color: nth($colores, 5);
+        font-style: italic;
+        text-align: center;
+        padding: 1rem;
+        @include textshadow(0px 5px 10px nth($colores, 3));
+      }
+    }
+  }
+}
+/* Media titulo */
+@media (max-width: 782px) {
+  .contenedor-titulo-principal {
+    margin: 1rem 0;
+    height: 5rem;
+    .titulo-principal {
+      font-family: "Roboto", sans-serif;
+      color: nth($colores, 2);
+      animation-name: animacion_1;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      animation-duration: 5s;
+      animation-delay: 0;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: map-get($textmaps, titulo3);
+    }
+  }
+  /* Media Subtitulo */
+  .contenedor-subtitulo {
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    .cont-sub {
+      transition: all ease 2s;
+      &:hover {
+        transform: scale(1.5);
+      }
+      .subtitulo {
+        font-family: "Roboto", sans-serif;
+        font-size: map-get($textmaps, titulo4);
+        letter-spacing: 6px;
+        word-spacing: 6px;
+        color: nth($colores, 5);
+        font-style: italic;
+        text-align: center;
+        padding: 1rem;
+        @include textshadow(0px 5px 10px nth($colores, 3));
+      }
+    }
+  }
+  .contenedor-maquina-escribir {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    text-align: center;
+    .maquina-escribir {
+      background-color: transparent;
+      position: relative;
+      @include textshadow(0px 10px 20px nth($colores, 3));
+      font-size: map-get($textmaps, titulo4 );
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .consejos {
+    font-size: map-get($textmaps, titulo3);
+  }
+}

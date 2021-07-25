@@ -1,0 +1,152 @@
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: nth($colores, 1);
+  .contenedor-redes {
+    .lista-redes {
+      list-style: none;
+      font-size: map-get($textmaps, parrafo2);
+      padding-left: 1rem;
+      i {
+        /* Condicion */
+        @include condicion(nth($colores, 5));
+      }
+      a {
+        text-decoration: none;
+        /* Condicion */
+        @include condicion(nth($colores, 5));
+      }
+      .redessociales {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+  .contenedor-legales {
+    padding: 0rem;
+    .contenedor-lista {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      .lista-legales {
+        list-style: none;
+        font-size: map-get($textmaps, parrafo2);
+        a {
+          text-decoration: none;
+          /* Condicion */
+          @include condicion(nth($colores, 5));
+        }
+      }
+    }
+    .contenedor-imagenlegales {
+      .imagen-legales {
+        width: 50%;
+        height: 10rem;
+      }
+    }
+  }
+}
+/* Media Footer */
+@media (max-width: 960px) {
+  .footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: nth($colores, 1);
+    text-align: center;
+    .contenedor-redes {
+      .lista-redes {
+        list-style: none;
+        font-size: map-get($textmaps, parrafo2);
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        a {
+          text-decoration: none;
+          color: nth($colores, 5);
+          &:hover {
+            color: nth($colores, 4);
+          }
+        }
+        .redessociales {
+          padding: 0;
+        }
+      }
+    }
+    .contenedor-legales {
+      .lista-legales {
+        list-style: none;
+        font-size: map-get($textmaps, parrafo2);
+        padding-left: 1rem;
+        a {
+          text-decoration: none;
+          color: nth($colores, 5);
+          &:hover {
+            color: nth($colores, 4);
+          }
+        }
+      }
+      .contenedor-imagenlegales {
+        .imagen-legales {
+          width: 50%; 
+          height: 8rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: nth($colores, 1);
+    .contenedor-redes {
+      .lista-redes {
+        list-style: none;
+        font-size: map-get($textmaps, parrafo2);
+        padding: 0;
+        a {
+          text-decoration: none;
+          color: nth($colores, 5);
+          &:hover {
+            color: nth($colores, 4);
+          }
+        }
+        .redessociales {
+          padding: 0;
+        }
+      }
+    }
+    .contenedor-legales {
+      padding-left: 0rem;
+      h2 {
+        padding-left: 0rem;
+      }
+      .lista-legales {
+        list-style: none;
+        font-size: map-get($textmaps, parrafo2);
+
+        a {
+          text-decoration: none;
+          color: nth($colores, 5);
+          &:hover {
+            color: nth($colores, 4);
+          }
+        }
+      }
+      .contenedor-imagenlegales {
+        .imagen-legales {
+          width: 70%;
+          height: 8rem;
+         
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+/* animations */
+@keyframes animacion_1 {
+  0% {
+    color: nth($colores, 1);
+  }
+  25% {
+    color: nth($colores, 3);
+  }
+
+  50% {
+    color: nth($colores, 3);
+  }
+
+  100% {
+    color: nth($colores, 1);
+  }
+};
+
+@keyframes maquinaescribir {
+  from {
+      width: 100%;
+  }
+  to {
+      width: 0%;
+  }
+};
+@keyframes slidein {
+  from {
+    transform: translate(5rem);
+}
+to {
+    transform: translate(0);
+}
+}

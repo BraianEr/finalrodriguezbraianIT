@@ -1,0 +1,167 @@
+/* Secciones */
+.titulo-seccion {
+  font-family: "Roboto", sans-serif;
+  font-size: map-get($textmaps, titulo3);
+  letter-spacing: 2px;
+  word-spacing: 6px;
+  color: nth($colores, 5);
+  text-align: center;
+  padding: 2rem 0 3rem 0;
+  @include textshadow(0px 5px 10px nth($colores, 3));
+}
+
+.contenedor-secciones {
+  .contenedor-parrafo-secciones {
+    display: flex;
+    align-items: center;
+    .p-secciones {
+      font-family: "Roboto", sans-serif;
+      font-size: map-get($textmaps, parrafo2);
+      color: nth($colores, 5);
+      text-align: center;
+      .hipervinculo-ayuda {
+        font-style: italic;
+        color: nth($colores, 2);
+        text-decoration: none;
+        &:hover {
+          color: nth($colores, 4);
+        }
+      }
+    }
+  }
+  .contenedor-imagen-secciones {
+    display: flex;
+    justify-content: center;
+    .deal {
+      &:hover {
+        animation: 5s linear running slidein;
+        animation-iteration-count: 3;
+      }
+    }
+    .shopping {
+      &:hover {
+        animation: 5s linear running slidein;
+        animation-iteration-count: 3;
+      }
+    }
+    .contact {
+      &:hover {
+        animation: 5s linear running slidein;
+        animation-iteration-count: 3;
+      }
+    }
+    img {
+      width: 15rem;
+    }
+  }
+}
+
+/* Media Secciones */
+@media (max-width: 993px) {
+  .titulo-seccion {
+    font-family: "Roboto", sans-serif;
+    font-size: map-get($textmaps, titulo4);
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    color: nth($colores, 5);
+    text-align: center;
+    padding: 2rem 0;
+    @include textshadow(0px 5px 10px nth($colores, 3));
+  }
+  .contenedor-secciones {
+    .mock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contenedor-parrafo-secciones {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .p-secciones {
+          font-family: "Roboto", sans-serif;
+          font-size: map-get($textmaps, parrafo2);
+          color: nth($colores, 5);
+          text-align: center;
+          padding: 2rem 0;
+          .hipervinculo-ayuda {
+            font-style: italic;
+            color: nth($colores, 2);
+            text-decoration: none;
+            &:hover {
+              color: nth($colores, 4);
+            }
+          }
+        }
+      }
+      .contenedor-imagen-secciones {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 12rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .titulo-seccion {
+    font-family: "Roboto", sans-serif;
+    font-size: map-get($textmaps, titulo4);
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    color: nth($colores, 5);
+    text-align: center;
+    padding: 2rem 0;
+    @include textshadow(0px 5px 10px nth($colores, 3));
+  }
+  .contenedor-secciones {
+    .mock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contenedor-parrafo-secciones {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .p-secciones {
+          font-family: "Roboto", sans-serif;
+          font-size: map-get($textmaps, parrafo2);
+          color: nth($colores, 5);
+          text-align: center;
+          padding: 2rem 0;
+          .hipervinculo-ayuda {
+            font-style: italic;
+            color: nth($colores, 2);
+            text-decoration: none;
+            &:hover {
+              color: nth($colores, 4);
+            }
+          }
+        }
+      }
+      .contenedor-imagen-secciones {
+        
+        .deal {
+          &:hover {
+            display: none;
+          }
+        }
+        .shopping {
+          &:hover {
+          display: none;
+          }
+        }
+        .contact {
+          &:hover {
+            display: none;
+          }
+        }
+        img {
+          width: 12rem;
+        }
+      }
+    }
+  }
+}

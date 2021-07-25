@@ -1,0 +1,118 @@
+/* Grid Tarjeta con Bootstrap */
+
+.grid-tarjeta {
+  .tarjetas-flex {
+    @extend %center;
+    padding: 1rem;
+    .descripcion-tarjeta {
+      font-size: map-get($textmaps, titulo4);
+      
+    }
+    .tilde {
+      font-size: 1.5rem;
+      padding-right: 0.1rem;
+    }
+  }
+  .tarjetait {
+    width: 25rem;
+    transition: all 2s;
+    padding: 1rem;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .utilidad {
+    margin-top: 3rem;
+  }
+  .tarjeta-dos {
+   text-align: left;
+  }
+  .tarjetas-cuatro {
+    justify-content: center;
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid-tarjeta {
+    .contener-items-tarjetas {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .tarjetas-flex {
+        justify-content: center;
+        .descripcion-tarjeta {
+          font-size: map-get($textmaps, parrafo4);
+        }
+      }
+      .tarjeta1,
+      .tarjeta3 {
+        width: 100%;
+        .descripcion-tarjeta {
+          font-size: map-get($textmaps, parrafo4);
+        }
+      }
+      .tarjetas-dos {
+        order: -1;
+        .tarjetait {
+          width: 20rem;
+          padding: 1rem;
+        }
+      }
+    }
+    .tarjetas-cuatro {
+      .descripcion-tarjeta {
+        font-size: map-get($textmaps, parrafo4);
+        padding: 2rem 0;
+        color: nth($colores, 4);
+      }
+    }
+    .utilidad {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .grid-tarjeta {
+    .contener-items-tarjetas {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .tarjetas-flex {
+        justify-content: center;
+        .descripcion-tarjeta {
+          font-size: map-get($textmaps, parrafo4);
+        }
+      }
+      .tarjeta1,
+      .tarjeta3 {
+        width: 100%;
+        .descripcion-tarjeta {
+          font-size: map-get($textmaps, parrafo4);
+        }
+      }
+      .tarjetas-dos {
+        order: -1;
+        .tarjetait {
+          width: 15rem;
+          padding: 1rem;
+        }
+      }
+    }
+    .tarjetas-cuatro {
+      .tilde {
+        display: none;
+      }
+      .descripcion-tarjeta {
+        font-size: map-get($textmaps, parrafo2);
+        padding: 2rem 0;
+        color: nth($colores, 4);
+        font-weight: 900;
+      }
+    }
+    .utilidad {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

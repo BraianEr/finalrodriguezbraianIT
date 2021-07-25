@@ -1,0 +1,69 @@
+/* Carousel */
+.carousel-inner {
+  height: 95vh;
+  .img-carousel {
+    height: 95vh;
+  }
+  .carousel-title {
+    font-size: map-get($textmaps, titulo2);
+    @include textshadow(0px 10px 20px nth($colores, 3));
+    color: nth($colores, 1);
+  }
+  .p-carousel {
+    font-size: 2rem;
+    @include textshadow(0px 10px 20px nth($colores, 3));
+    color: nth($colores, 1);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel-inner {
+    height: 25rem;
+
+    .img-carousel {
+      height: 25rem;
+    }
+    .carousel-title {
+      font-size: map-get($textmaps, titulo3);
+      @include textshadow(0px 5px 10px nth($colores, 5));
+    }
+    .p-carousel {
+      font-size: map-get($textmaps, parrafo2);
+      @include textshadow(0px 5px 10px nth($colores, 5));
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .carousel-inner {
+    height: 20rem;
+
+    .img-carousel {
+      height: 20rem;
+    }
+    .carousel-title {
+      font-size: map-get($textmaps, titulo4);
+      @include textshadow(0px 5px 10px nth($colores, 5));
+    }
+    .p-carousel {
+      font-size: map-get($textmaps, parrafo2);
+      @include textshadow(0px 5px 10px nth($colores, 5));
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .carousel-inner {
+    height: 15rem;
+
+    .img-carousel {
+      height: 15rem;
+    }
+    .carousel-title {
+      font-size: map-get($textmaps, titulo5);
+      @include textshadow(0px 5px 10px nth($colores, 5));
+    }
+    .p-carousel {
+      font-size: map-get($textmaps, parrafo2);
+      @include textshadow(0px 5px 10px nth($colores, 5));
+    }
+  }
+}
